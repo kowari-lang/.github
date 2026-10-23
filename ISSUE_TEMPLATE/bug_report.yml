@@ -1,0 +1,47 @@
+name: Bug report
+description: Something in the compiler, stdlib, or tools behaves incorrectly.
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug. Please search existing
+        issues first. For security problems, see SECURITY.md — do **not**
+        open a public issue.
+  - type: input
+    id: version
+    attributes:
+      label: Kowari version
+      description: Output of `kowaric --version`
+      placeholder: "kowaric 0.3.1 (language v0.9)"
+    validations:
+      required: true
+  - type: input
+    id: platform
+    attributes:
+      label: Platform
+      placeholder: "Linux x86-64, macOS aarch64, …"
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Minimal reproducer
+      description: A self-contained `.kowari` program, as small as possible.
+      render: kowari
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: Include the full diagnostic, including the `E####` code.
+    validations:
+      required: true

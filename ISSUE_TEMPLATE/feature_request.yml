@@ -1,0 +1,41 @@
+name: Feature request
+description: Suggest a language, stdlib, or tooling change.
+title: "[feature] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Kowari has a deliberately narrow scope. Before proposing a feature,
+        check the **Non-Goals** section of `SPEC.md` §2 — many ideas were
+        considered and rejected on purpose. If the feature is not a
+        non-goal, explain why it belongs.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+    validations:
+      required: true
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Scope
+      options:
+        - Language semantics (requires SPEC.md change)
+        - Standard library
+        - Compiler / tooling
+        - Documentation
+    validations:
+      required: true
